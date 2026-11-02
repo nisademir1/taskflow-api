@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Login endpoint'ini yaz",
+    "description": "Kullanıcı girişi için backend tarafında login endpoint'i geliştirilecek",
+    "status": "completed",
+    "priority": "high",
+    "assignee": "Nisa",
+    "project": "TaskFlow",
+    "dueDate": "2026-11-05",
+    "createdAt": "2026-11-01T09:00:00.000Z",
+    "updatedAt": "2026-11-01T15:30:00.000Z"
+  },
+  {
+    "id": 2,
+    "title": "Veri modelini tasarla",
+    "description": "Görev nesnesinin alanları ve tipleri belirlenecek",
+    "status": "in-progress",
+    "priority": "medium",
+    "assignee": "Musa",
+    "project": "TaskFlow",
+    "dueDate": "2026-11-08",
+    "createdAt": "2026-11-01T10:00:00.000Z",
+    "updatedAt": "2026-11-01T10:00:00.000Z"
+  }
+]
