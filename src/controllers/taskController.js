@@ -92,7 +92,12 @@ function deleteTask(req, res) {
   if (!task) {
     return res.status(404).json({ success: false, message: `${id} id'li görev bulunamadı` });
   }
-  function searchTasks(req, res) {
+
+  writeTasks(tasks.filter((t) => t.id !== id));
+  res.json({ success: true, message: "Görev silindi", data: task });
+}
+
+function searchTasks(req, res) {
   const keyword = (req.query.keyword || "").toLowerCase();
 
   if (!keyword) {
@@ -104,10 +109,6 @@ function deleteTask(req, res) {
   );
 
   res.json({ success: true, count: results.length, data: results });
-}
-
-  writeTasks(tasks.filter((t) => t.id !== id));
-  res.json({ success: true, message: "Görev silindi", data: task });
 }
 
 module.exports = { getAllTasks, getTaskById, createTask, updateTask, deleteTask, searchTasks };
