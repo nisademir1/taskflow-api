@@ -1,8 +1,32 @@
 const { readTasks, writeTasks, nextId } = require("../utils/fileDb");
 
 function getAllTasks(req, res) {
-  const tasks = readTasks();
-  res.json({ success: true, count: tasks.length, data: tasks });
+  let tasks = readTasks();
+  const { status, priority, assignee, page, limit } = req.query;
+
+  if (status) tasks = tasks.filter((t) => t.status === status);
+  if (priority) tasks = tasks.filter((t) => t.priority === priority);
+  if (assignee) tasks = tasks.filter((t) => t.assignee.toLowerCase() === assignee.toLowerCase());
+
+  const total = tasks.length;
+
+  if (page || limit) {
+    const p = Number(page) || 1;
+    const l = Number(limit) || 10;
+    const start = (p - 1) * l;
+    tasks = tasks.slice(start, start + l);
+
+    return res.json({
+      success: true,
+      total,
+      page: p,
+      totalPages: Math.ceil(total / l),
+      count: tasks.length,
+      data: tasks,
+    });
+  }
+
+  res.json({ success: true, count: total, data: tasks });
 }
 
 function getTaskById(req, res) {
@@ -68,9 +92,22 @@ function deleteTask(req, res) {
   if (!task) {
     return res.status(404).json({ success: false, message: `${id} id'li görev bulunamadı` });
   }
+  function searchTasks(req, res) {
+  const keyword = (req.query.keyword || "").toLowerCase();
+
+  if (!keyword) {
+    return res.status(400).json({ success: false, message: "keyword parametresi gereklidir" });
+  }
+
+  const results = readTasks().filter(
+    (t) => t.title.toLowerCase().includes(keyword) || t.description.toLowerCase().includes(keyword)
+  );
+
+  res.json({ success: true, count: results.length, data: results });
+}
 
   writeTasks(tasks.filter((t) => t.id !== id));
   res.json({ success: true, message: "Görev silindi", data: task });
 }
 
-module.exports = { getAllTasks, getTaskById, createTask, updateTask, deleteTask };
+module.exports = { getAllTasks, getTaskById, createTask, updateTask, deleteTask, searchTasks };
