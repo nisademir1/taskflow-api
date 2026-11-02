@@ -8,4 +8,13 @@ function readTasks() {
   return JSON.parse(raw);
 }
 
-module.exports = { readTasks };
+function writeTasks(tasks) {
+  fs.writeFileSync(DATA_FILE, JSON.stringify(tasks, null, 2), "utf-8");
+}
+
+function nextId(tasks) {
+  if (tasks.length === 0) return 1;
+  return Math.max(...tasks.map((t) => t.id)) + 1;
+}
+
+module.exports = { readTasks, writeTasks, nextId };
