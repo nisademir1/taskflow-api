@@ -22,17 +22,5 @@
     "dueDate": "2026-11-08",
     "createdAt": "2026-11-01T10:00:00.000Z",
     "updatedAt": "2026-11-01T10:00:00.000Z"
-  },
-  {
-    "id": 3,
-    "title": "Postman testlerini yap",
-    "description": "Tüm CRUD uçları Postman ile test edilecek",
-    "status": "pending",
-    "priority": "high",
-    "assignee": "Nisa",
-    "project": "TaskFlow",
-    "dueDate": "2026-11-10",
-    "createdAt": "2026-11-02T16:59:42.941Z",
-    "updatedAt": "2026-11-02T16:59:42.941Z"
   }
 ]
