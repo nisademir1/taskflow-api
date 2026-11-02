@@ -64,8 +64,8 @@ Koleksiyon: `docs/TaskFlow.postman_collection.json`
 
 | Test | Ekran görüntüsü |
 |---|---|
-| Görev ekleme | ![POST](docs/postman-screenshots/01-create.png) |
-| Görev listeleme | ![GET](docs/postman-screenshots/02-list.png) |
-| Görev detayı | ![GET by id](docs/postman-screenshots/03-detail.png) |
-| Görev güncelleme | ![PUT](docs/postman-screenshots/04-update.png) |
-| Görev silme | ![DELETE](docs/postman-screenshots/05-delete.png) |
+| Görev ekleme | ![POST](docs/postman-screenshots/01-create.jpeg) |
+| Görev listeleme | ![GET](docs/postman-screenshots/02-list.jpeg) |
+| Görev detayı | ![GET by id](docs/postman-screenshots/03-detail.jpeg) |
+| Görev güncelleme | ![PUT](docs/postman-screenshots/04-update.jpeg) |
+| Görev silme | ![DELETE](docs/postman-screenshots/05-delete.jpeg) |
