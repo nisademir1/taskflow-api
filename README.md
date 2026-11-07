@@ -68,4 +68,4 @@ Koleksiyon: `docs/TaskFlow.postman_collection.json`
 | Görev listeleme | ![GET](docs/postman-screenshots/02-list.jpeg) |
 | Görev detayı | ![GET by id](docs/postman-screenshots/03-detail.jpeg) |
 | Görev güncelleme | ![PUT](docs/postman-screenshots/04-update.jpeg) |
-| Görev silme | ![DELETE](docs/postman-screenshots/05-delete.png) |
+| Görev silme | ![DELETE](docs/postman-screenshots/05-delete.jpeg) |
