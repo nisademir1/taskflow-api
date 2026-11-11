@@ -1,14 +1,14 @@
 {
   "name": "taskflow",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "TaskFlow - Görev ve Proje Yönetim Sistemi REST API",
+  "main": "server.js",
   "scripts": {
-  "start": "node server.js",
-  "dev": "node --watch server.js"
-},
-  "keywords": [],
-  "author": "",
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["nodejs", "express", "rest-api"],
+  "author": "Meryem Nisa Demir",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
