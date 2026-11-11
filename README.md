@@ -7,7 +7,7 @@ tüm istekler Logger middleware ile kayıt altına alınır.
 > Software Persona — Backend Geliştirme Bitirme Projesi
 > Hazırlayan: **Meryem Nisa Demir**
 
-   📄 Proje Tanıtım Dokümanı: [docs/Backend_Gelistirme_Proje_Envanteri.pdf](docs/Backend_Gelistirme_Proje_Envanteri.pdf)
+📄 Proje Tanıtım Dokümanı: [docs/Backend_Gelistirme_Proje_Envanteri.pdf](docs/Backend_Gelistirme_Proje_Envanteri.pdf)
 
 ## Kurulum
 
